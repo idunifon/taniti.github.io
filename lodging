@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti - Lodging</title>
+  </head>
+  <body>
+    <div>
+      <div class="header-titles">
+        <h1 class="logo">Taniti</h1>
+        <h1 class="header">Lodging in Taniti</h1>
+      </div>
+      <search class="searchable">
+        <form action="#" method="get">
+          <label for="site-search">Search the site</label>
+          <input type="search" id="site-search" name="q" placeholder="Enter keywords..." required />
+          <button type="submit">Search</button>
+        </form>
+      </search>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lodging.html" class="active" aria-current="page">Lodging</a>
+      <a href="activities.html">Activities</a>
+      <a href="transportation.html">Transportation</a>
+      <a href="dining.html">Food & Dining</a>
+    </nav>
+    <main>
+      <p><strong>Lodging:</strong> Taniti has a wide variety of lodgings that range from an inexpensive hostel to one large, four-star resort. There are many small, family-owned hotels and a growing number of bed and breakfasts. All types of lodging are strictly regulated and regularly inspected by the Tanitian government.</p>
+    </main>
+    <aside>
+      <img src="url" alt="Taniti resort lodging">
+    </aside>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lodging.html" class="active" aria-current="page">Lodging</a>
+      <a href="activities.html">Activities</a>
+      <a href="transportation.html">Transportation</a>
+      <a href="dining.html">Food & Dining</a>
+    </nav>
+    <script src="./script.js"></script>
+  </body>
+</html>
