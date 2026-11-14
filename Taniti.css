@@ -1,0 +1,256 @@
+/* =========================================
+   Base & Tropical Island Palette
+   ========================================= */
+:root {
+  --ocean-deep: #004e64;
+  --ocean-teal: #00a5cf;
+  --lagoon-light: #e0fbfc;
+  --sand-warm: #fcf9f2;
+  --coral-accent: #ff6b6b;
+  --coral-hover: #e85555;
+  --text-dark: #1d2d35;
+  --text-muted: #526773;
+  --white: #ffffff;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 78, 100, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--sand-warm);
+  color: var(--text-dark);
+  line-height: 1.65;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav-top"
+    "main"
+    "aside"
+    "nav-bottom";
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+}
+
+/* Desktop Two-Column Layout for Main & Aside */
+@media (min-width: 850px) {
+  body {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "nav-top nav-top"
+      "main aside"
+      "nav-bottom nav-bottom";
+  }
+}
+
+/* =========================================
+   Top Header Banner (Targeting the first div)
+   ========================================= */
+body > div:first-of-type {
+  grid-area: header;
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-teal) 100%);
+  color: var(--white);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--lagoon-light);
+}
+
+.header {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Search Bar */
+.searchable form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.4rem 0.6rem;
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+}
+
+.searchable label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.searchable input[type="search"] {
+  border: none;
+  background: transparent;
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  font-size: 0.95rem;
+  outline: none;
+  width: 180px;
+}
+
+.searchable input[type="search"]::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.searchable button {
+  background-color: var(--coral-accent);
+  color: var(--white);
+  border: none;
+  padding: 0.45rem 1.1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.searchable button:hover {
+  background-color: var(--coral-hover);
+}
+
+/* =========================================
+   Navigation Bars (Top & Bottom)
+   ========================================= */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 2rem;
+  padding: 1rem 2rem;
+}
+
+/* Top Nav */
+nav:first-of-type {
+  grid-area: nav-top;
+  background-color: var(--lagoon-light);
+  border-bottom: 2px solid #cbeff2;
+}
+
+nav:first-of-type a {
+  color: var(--ocean-deep);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+nav:first-of-type a:hover {
+  background-color: var(--ocean-teal);
+  color: var(--white);
+}
+
+/* Bottom Footer Nav */
+nav:last-of-type {
+  grid-area: nav-bottom;
+  background-color: var(--ocean-deep);
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+nav:last-of-type a {
+  color: var(--lagoon-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav:last-of-type a:hover {
+  color: var(--coral-accent);
+  text-decoration: underline;
+}
+
+/* =========================================
+   Main Content Area
+   ========================================= */
+main {
+  grid-area: main;
+  padding: 2.5rem;
+}
+
+main p:first-of-type {
+  font-size: 1.25rem;
+  color: var(--ocean-deep);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--coral-accent);
+}
+
+main p:nth-of-type(2) {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+main ul {
+  list-style: none;
+  background-color: var(--sand-warm);
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+main li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.98rem;
+}
+
+main li::before {
+  content: "🌴";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+/* =========================================
+   Sidebar / Aside Image
+   ========================================= */
+aside {
+  grid-area: aside;
+  padding: 2.5rem 2.5rem 2.5rem 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 849px) {
+  aside {
+    padding: 0 2.5rem 2.5rem 2.5rem;
+  }
+}
+
+aside img {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-color: var(--lagoon-light); /* Fallback while image loads */
+  border: 4px solid var(--white);
+}
