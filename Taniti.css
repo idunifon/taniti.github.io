@@ -238,6 +238,26 @@ nav:last-of-type a:hover {
 }
 
 /* =========================================
+   Active Navigation State Styling
+   ========================================= */
+
+/* Top Navigation Active State */
+nav:first-of-type a.active,
+nav:first-of-type a[aria-current="page"] {
+  background-color: var(--ocean-deep);
+  color: var(--white);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom Footer Navigation Active State */
+nav:last-of-type a.active,
+nav:last-of-type a[aria-current="page"] {
+  color: var(--coral-accent);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* =========================================
    Main Content Area
    ========================================= */
 main {
