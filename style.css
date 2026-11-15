@@ -287,14 +287,17 @@ main li::before {
   font-size: 1.15rem;
 }
 
+
 /* =========================================
-   Sidebar / Aside Image
+   Sidebar / Aside Image & Photo Credit
    ========================================= */
 aside {
   grid-area: aside;
   padding: 2.5rem 2.5rem 2.5rem 0;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
+  gap: 0.65rem;
 }
 
 @media (max-width: 899px) {
@@ -312,4 +315,11 @@ aside img {
   box-shadow: var(--shadow);
   background-color: var(--lagoon-light);
   border: 4px solid var(--white);
+}
+
+aside p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding-left: 0.25rem;
 }
